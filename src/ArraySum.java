@@ -1,12 +1,13 @@
+import java.util.Arrays;
+
 public class ArraySum {
-    public static void main(String[] args) {
-        int[] numbers = {1, 2, 3, 4, 5};
-        int sum = 0;
 
-        for (int num : numbers) {
-            sum += num;
-        }
+    public static void main(String[] args){
+        int [] array= {2,4,6,7,9};
 
-        System.out.println("Sum of array elements: " + sum);
+        int sum =0;
+        for(int i: array) sum += i ;
+
+        System.out.println(sum);
     }
 }

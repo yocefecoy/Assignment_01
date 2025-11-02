@@ -1,13 +1,32 @@
-public class RemoveElement {
-    public static void main(String[] args) {
-        int[] numbers = {1, 2, 3, 4, 5};
-        int remove = 3;
+import java.util.Arrays;
 
-        System.out.print("Array after removing " + remove + ": ");
-        for (int num : numbers) {
-            if (num != remove) {
-                System.out.print(num + " ");
+public class RemoveElement {
+
+    public static int[] removeAllOccurrences(int[] arr, int key) {
+
+        int count = 0;
+        for (int value : arr) {
+            if (value != key) count++;
+        }
+
+        int[] result = new int[count];
+        int index = 0;
+
+        for (int value : arr) {
+            if (value != key) {
+                result[index] = value;
+                index++;
             }
         }
+
+        return result;
+    }
+
+    public static void main(String[] args){
+        int[] arra = {1, 2, 1, 3, 5, 1};
+        int key = 1;
+
+        int[] r = removeAllOccurrences(arra, key);
+        System.out.println(Arrays.toString(r));
     }
 }
