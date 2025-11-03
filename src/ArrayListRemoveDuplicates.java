@@ -3,19 +3,15 @@ import java.util.LinkedHashSet;
 
 public class ArrayListRemoveDuplicates {
     public static void main(String[] args) {
-        ArrayList<Integer> numbers = new ArrayList<>();
-        numbers.add(1);
-        numbers.add(2);
-        numbers.add(2);
-        numbers.add(3);
-        numbers.add(4);
-        numbers.add(4);
-        numbers.add(5);
+        ArrayList<Integer> list = new ArrayList<>();
+        int[] input = {1, 2, 2, 3, 3, 4, 5};
+        for (int x : input) list.add(x);
 
-        LinkedHashSet<Integer> set = new LinkedHashSet<>(numbers);
-        numbers.clear();
-        numbers.addAll(set);
 
-        System.out.println("ArrayList after removing duplicates: " + numbers);
+
+
+        ArrayList<Integer> result = new ArrayList<>(new LinkedHashSet<>(list));
+
+        System.out.println(result);
     }
 }

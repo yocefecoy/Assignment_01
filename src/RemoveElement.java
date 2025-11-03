@@ -1,32 +1,19 @@
-import java.util.Arrays;
-
 public class RemoveElement {
 
-    public static int[] removeAllOccurrences(int[] arr, int key) {
-
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 1, 3, 5, 1};
+        int key = 1;
         int count = 0;
-        for (int value : arr) {
-            if (value != key) count++;
-        }
+        int[] arr2 = new int[arr.length];
 
-        int[] result = new int[count];
-        int index = 0;
-
-        for (int value : arr) {
-            if (value != key) {
-                result[index] = value;
-                index++;
+        for (int num : arr) {
+            if (num != key) {
+                arr2[count++] = num;
             }
         }
 
-        return result;
-    }
-
-    public static void main(String[] args){
-        int[] arra = {1, 2, 1, 3, 5, 1};
-        int key = 1;
-
-        int[] r = removeAllOccurrences(arra, key);
-        System.out.println(Arrays.toString(r));
+        for (int i = 0; i < count; i++) {
+            System.out.println(arr2[i]);
+        }
     }
 }

@@ -2,16 +2,24 @@ import java.util.ArrayList;
 
 public class ArrayListRemoveElement {
     public static void main(String[] args) {
-        ArrayList<Integer> numbers = new ArrayList<>();
-        numbers.add(1);
-        numbers.add(2);
-        numbers.add(3);
-        numbers.add(4);
-        numbers.add(5);
+        ArrayList<Integer> list = new ArrayList<>();
+        int[] input = {1, 2, 1, 3, 5, 1};
 
-        int remove = 3;
-        numbers.remove(Integer.valueOf(remove));
 
-        System.out.println("ArrayList after removing " + remove + ": " + numbers);
+
+        for (int x : input) list.add(x);
+
+        int key = 1;
+
+        list.removeIf(n -> n == key);
+
+        System.out.println(list);
+
+
+
+
+
+
+
     }
 }
